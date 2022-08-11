@@ -2,6 +2,11 @@
 An easy to use files functions and api for browsers.<br>
 In your client side code, you can easilly download any file by a url or even export anything you want to several types of files like txt, js, yml, csv, and even **excel** files.<br>
 
+![GitHub package.json version (branch)](https://img.shields.io/github/package-json/v/ItamarSmirra/Fs-Browsers/main?color=pink)
+[![GitHub issues](https://img.shields.io/github/issues/ItamarSmirra/React-Meilisearch)](https://github.com/ItamarSmirra/Fs-Browsers/issues)
+![GitHub](https://img.shields.io/github/license/ItamarSmirra/Fs-Browsers?color=purple)
+![GitHub repo file count](https://img.shields.io/github/directory-file-count/ItamarSmirra/Fs-Browsers)
+
 # Install
 ```
 npm install fs-browsers
