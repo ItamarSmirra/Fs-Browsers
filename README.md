@@ -6,6 +6,7 @@ In your client side code, you can easilly download any file by a url or even exp
 [![GitHub issues](https://img.shields.io/github/issues/ItamarSmirra/React-Meilisearch)](https://github.com/ItamarSmirra/Fs-Browsers/issues)
 ![GitHub](https://img.shields.io/github/license/ItamarSmirra/Fs-Browsers?color=purple)
 ![GitHub repo file count](https://img.shields.io/github/directory-file-count/ItamarSmirra/Fs-Browsers)
+![npm bundle size](https://img.shields.io/bundlephobia/minzip/fs-browsers?color=red)
 
 # Install
 ```
