@@ -1,0 +1,49 @@
+{
+  "name": "fs-browsers",
+  "version": "1.2.0",
+  "description": "Usefull files functions for browsers and client side",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "build:cjs": "tsc --outDir dist/cjs",
+    "build:es": "tsc -m esNext --outDir dist/esm",
+    "build": "shx rm -rf dist && npm run build:cjs && npm run build:es"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ItamarSmirra/Fs-Browsers.git"
+  },
+  "keywords": [
+    "javascript",
+    "browser",
+    "files",
+    "fs",
+    "export",
+    "download"
+  ],
+  "author": "itamar-smirra",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ItamarSmirra/Fs-Browsers/issues"
+  },
+  "homepage": "https://github.com/ItamarSmirra/Fs-Browsers#readme",
+  "dependencies": {
+    "export-to-excel.js": "^2.0.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.10",
+    "@babel/preset-env": "^7.18.10",
+    "@babel/preset-typescript": "^7.18.6",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.5",
+    "ts-node": "^10.9.1",
+    "tslib": "^2.4.0",
+    "typescript": "^4.7.4"
+  }
+}

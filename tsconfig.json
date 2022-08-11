@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+      "target": "ES2022",
+      "module": "ESNext",
+      "moduleResolution": "node",
+      "jsx": "react",
+      "declaration": true,
+      "pretty": true,
+      "rootDir": "src",
+      "sourceMap": false,
+      "strict": true,
+      "esModuleInterop": true,
+      "noUnusedLocals": true,
+      "noUnusedParameters": true,
+      "noImplicitReturns": true,
+      "noImplicitAny": false,
+      "noFallthroughCasesInSwitch": true,
+      "outDir": "dist/types",
+      "importHelpers": true
+    },
+    "exclude": [
+      "node_modules",
+      "dist",
+      "esm"
+    ]
+  }
