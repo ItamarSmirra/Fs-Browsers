@@ -78,7 +78,7 @@ The downside is that for exporting to xls files a http request is sent to an ext
 <br>
 The excel file that will be downloaded looks like -<br>
 <br>
-![alt text](https://github.com/ItamarSmirra/Fs-Browsers/blob/main/excel-example.png?raw=true)
+![Excel Example]excel-example.png)
 
 # Options
 
