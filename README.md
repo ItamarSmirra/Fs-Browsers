@@ -78,7 +78,7 @@ The downside is that for exporting to xls files a http request is sent to an ext
 <br>
 The excel file that will be downloaded looks like -<br>
 <br>
-![Excel Example]excel-example.png)
+![Excel Example](excel-example.png)
 
 # Options
 
