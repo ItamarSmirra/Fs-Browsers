@@ -1,7 +1,6 @@
-import ExcelService from 'export-to-excel.js';
 import { FILE_TYPES } from '../types';
-// ExcelService.wakeUp();
-const getFileNameBySuffix = (fileName, suffix) => fileName ? `${fileName.split('.')[0]}.${suffix}` : `file.${suffix}`;
+import { exportToXLSX } from './utils';
+const getFileNameBySuffix = (fileName, suffix) => `${fileName.split('.')[0]}.${suffix}`;
 const exportGenericFile = (text, fileName) => {
     const aElement = document.createElement("a");
     aElement.href = "data:text/plain;charset=utf-8," + text;
@@ -22,21 +21,22 @@ const exportCsvFile = (data, { fileName, headings }) => {
     aElement.click();
     document.body.removeChild(aElement);
 };
-const exportFile = (data, options = { fileName: 'file.txt', type: FILE_TYPES.OTHER, headings: null }) => {
-    if (options.type === FILE_TYPES.EXCEL) {
-        const excelName = getFileNameBySuffix(options.fileName, FILE_TYPES.EXCEL);
-        if (options.headings && options.headings.length > 0) {
-            ExcelService.export(data, { headings: options.headings, fileName: excelName });
-        }
-        else {
-            ExcelService.export(data, { fileName: excelName });
-        }
-    }
-    else if (options.type === FILE_TYPES.CSV) {
-        exportCsvFile(data, { fileName: getFileNameBySuffix(options.fileName, FILE_TYPES.CSV), headings: options.headings });
+const exportFile = (data, options) => {
+    if (!options) {
+        exportGenericFile(data, 'file.txt');
     }
     else {
-        exportGenericFile(data, options.fileName ? options.fileName : 'file.txt');
+        if (options.type === FILE_TYPES.EXCEL) {
+            const excelName = options.fileName ? getFileNameBySuffix(options.fileName, FILE_TYPES.EXCEL) : 'Excel.xlsx';
+            exportToXLSX(data, { ...options, fileName: excelName });
+        }
+        else if (options.type === FILE_TYPES.CSV) {
+            const csvName = options.fileName ? getFileNameBySuffix(options.fileName, FILE_TYPES.CSV) : 'file.csv';
+            exportCsvFile(data, { fileName: csvName, headings: options.headings });
+        }
+        else {
+            exportGenericFile(data, options.fileName ? options.fileName : 'file.txt');
+        }
     }
 };
 export default exportFile;

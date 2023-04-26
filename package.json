@@ -33,17 +33,15 @@
     "url": "https://github.com/ItamarSmirra/Fs-Browsers/issues"
   },
   "homepage": "https://github.com/ItamarSmirra/Fs-Browsers#readme",
-  "dependencies": {
-    "export-to-excel.js": "^2.0.4"
-  },
   "devDependencies": {
-    "@babel/core": "^7.18.10",
-    "@babel/preset-env": "^7.18.10",
-    "@babel/preset-typescript": "^7.18.6",
-    "babel-core": "^6.26.3",
-    "babel-loader": "^8.2.5",
+    "@babel/core": "^7.21.4",
+    "@babel/preset-env": "^7.21.4",
+    "@babel/preset-typescript": "^7.21.4",
     "ts-node": "^10.9.1",
-    "tslib": "^2.4.0",
-    "typescript": "^4.7.4"
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "xlsx": "^0.18.5",
+    "xlsx-js-style": "^1.2.0"
   }
 }

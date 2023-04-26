@@ -8,6 +8,10 @@ In your client side code, you can easilly download any file by a url or even exp
 ![GitHub repo file count](https://img.shields.io/github/directory-file-count/ItamarSmirra/Fs-Browsers)
 ![npm bundle size](https://img.shields.io/bundlephobia/minzip/fs-browsers?color=red)
 
+# Whats New?
+
+- Using 
+
 # Install
 ```
 npm install fs-browsers
@@ -85,7 +89,7 @@ The excel file that will be downloaded looks like -<br>
 | option | description | default value |
 | ------ | ------ | ------ |
 | fileName | the name of the file to be exported, including the suffix | file.txt |
-| type | excel file or other type of a file | non-excel file |
+| type | excel file or other type of a file | OTHER file |
 | headings | the headings for the excel file, if not presented the headings will be the object keys. relevant only for excel files | - |
 
 <br>
