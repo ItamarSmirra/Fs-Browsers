@@ -185,7 +185,7 @@ Moreover, xlsx files are more complex and functional then csv files.<br>
 <br>
 The Excel file that will be downloaded looks like -<br>
 <br>
-![Excel Example](https://raw.githubusercontent.com/ItamarSmirra/Fs-Browsers/main/excel-example.png)
+![Excel Example](excel-example.png?raw=true)
 
 ### Parameters
 
