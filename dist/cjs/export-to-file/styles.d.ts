@@ -1,71 +1,35 @@
-export declare const headingsStyle: {
+import { BorderType, CellStyle } from "xlsx-js-style";
+export interface BorderStyle {
+    style: BorderType;
+    color: {
+        rgb: string;
+    };
+}
+export declare const defaultHeadingsStyle: CellStyle;
+export declare const defaultTitleStyle: {
     font: {
         sz: number;
         bold: boolean;
     };
-    fill: {
-        fgColor: {
-            rgb: string;
-        };
-    };
     alignment: {
         horizontal: string;
+        vertical: string;
     };
     border: {
-        top: {
-            style: string;
-            color: {
-                rgb: string;
-            };
-        };
-        bottom: {
-            style: string;
-            color: {
-                rgb: string;
-            };
-        };
-        left: {
-            style: string;
-            color: {
-                rgb: string;
-            };
-        };
-        right: {
-            style: string;
-            color: {
-                rgb: string;
-            };
-        };
+        top: BorderStyle;
+        bottom: BorderStyle;
+        left: BorderStyle;
+        right: BorderStyle;
     };
 };
-export declare const defaultStyle: {
+export declare const defaultCellStyle: {
     font: {
         sz: number;
     };
     border: {
-        top: {
-            style: string;
-            color: {
-                rgb: string;
-            };
-        };
-        bottom: {
-            style: string;
-            color: {
-                rgb: string;
-            };
-        };
-        left: {
-            style: string;
-            color: {
-                rgb: string;
-            };
-        };
-        right: {
-            style: string;
-            color: {
-                rgb: string;
-            };
-        };
+        top: BorderStyle;
+        bottom: BorderStyle;
+        left: BorderStyle;
+        right: BorderStyle;
     };
 };
