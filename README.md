@@ -10,10 +10,8 @@ In your client side code, you can easilly download any file by a url or even exp
 
 # Whats New?
 
-- Using [Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob) for exporting text
-- Export xlsx files without the need for network (can work offline)
-- Update the methods names and imports
-- Using [xlsx-js-style](https://www.npmjs.com/package/xlsx-js-style) instead of export-to-excel.js
+- Add sheet title option to add title in the top of the sheet
+- Add option to override the default excel cells styles
 
 # Install
 ```
@@ -179,12 +177,42 @@ const data = [
 const headings = ["First Name", "Last Name", "Age"];
 exportXlsxFile(data, 'names.xlsx', { headings: headings });
 ```
+
+You can add title to the excel sheet that will be presented above the data table:<br>
+```javascript
+import { exportXlsxFile } from 'fs-browsers';
+const data = [
+    {
+      firstName: 'John',
+      lastName: 'Doe',
+      age: 20,
+    },
+    {
+      firstName: 'Peter',
+      lastName: 'Parker',
+      age: 30,
+    },
+    {
+      firstName: 'Mark',
+      lastName: 'Twain',
+      age: 40,
+    },
+  ]
+const headings = ["First Name", "Last Name", "Age"];
+const title = "People";
+exportXlsxFile(data, 'names.xlsx', { headings: headings, sheetTitle: title });
+```
+
 It is very much the same as csv files in the code, but the result is a bit different. The Excel file has some simple design and the csv file has not.<br>
 Moreover, xlsx files are more complex and functional then csv files.<br>
-
 <br>
-The Excel file that will be downloaded looks like -<br>
-https://github.com/ItamarSmirra/Fs-Browsers/raw/main/ExcelExample.jpg
+The Excel file that will be downloaded looks like -
+<br>
+![Excel Example](https://github.com/ItamarSmirra/Fs-Browsers/blob/main/ExcelExample.jpg?raw=true)
+<br>
+The Excel file with the title looks like -
+<br>
+![Excel With Title Example](https://github.com/ItamarSmirra/Fs-Browsers/blob/main/ExcelWithTitleExample.jpg?raw=true)
 
 ### Parameters
 
@@ -200,6 +228,10 @@ https://github.com/ItamarSmirra/Fs-Browsers/raw/main/ExcelExample.jpg
 | ------ | ------ | ------ | ------ | ------ |
 | headings | string[] | array of string for the Excel headings row | false | null |
 | sheetName | string | the name of the sheet in the Excel | false | Sheet1 |
+| sheetTitle | string | title to be prensented in the top sheet above the data table | false | - |
+| cellStyle | CellStyle | style object to the data table cells as described in the [xlsx-js-style](https://www.npmjs.com/package/xlsx-js-style) package | false | defaultCellStyle |
+| headingStyle | CellStyle | style object to the data table heading cells as described in the [xlsx-js-style](https://www.npmjs.com/package/xlsx-js-style) package | false | defaultHeadingStyle |
+| titleStyle | CellStyle | style object to the sheet title cells as described in the [xlsx-js-style](https://www.npmjs.com/package/xlsx-js-style) package | false | defaultTitleStyle |
 
 <br>
 
