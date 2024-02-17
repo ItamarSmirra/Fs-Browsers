@@ -205,14 +205,8 @@ exportXlsxFile(data, 'names.xlsx', { headings: headings, sheetTitle: title });
 
 It is very much the same as csv files in the code, but the result is a bit different. The Excel file has some simple design and the csv file has not.<br>
 Moreover, xlsx files are more complex and functional then csv files.<br>
-<br>
-The Excel file that will be downloaded looks like -
-<br>
-![Excel Example](https://github.com/ItamarSmirra/Fs-Browsers/blob/main/ExcelExample.jpg?raw=true)
-<br>
-The Excel file with the title looks like -
-<br>
-![Excel With Title Example](https://github.com/ItamarSmirra/Fs-Browsers/blob/main/ExcelWithTitleExample.jpg?raw=true)
+
+The Excel file with the title looks like -![Excel With Title Example](https://github.com/ItamarSmirra/Fs-Browsers/blob/main/ExcelWithTitleExample.jpg?raw=true)
 
 ### Parameters
 
