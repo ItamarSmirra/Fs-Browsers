@@ -205,7 +205,6 @@ exportXlsxFile(data, 'names.xlsx', { headings: headings, sheetTitle: title });
 
 It is very much the same as csv files in the code, but the result is a bit different. The Excel file has some simple design and the csv file has not.<br>
 Moreover, xlsx files are more complex and functional then csv files.<br>
-
 <br>
 The Excel file that will be downloaded looks like -
 <br>
@@ -230,9 +229,9 @@ The Excel file with the title looks like -
 | headings | string[] | array of string for the Excel headings row | false | null |
 | sheetName | string | the name of the sheet in the Excel | false | Sheet1 |
 | sheetTitle | string | title to be prensented in the top sheet above the data table | false | - |
-| cellStyle | style object to the data table cells as described in the [xlsx-js-style](https://www.npmjs.com/package/xlsx-js-style) package | false | defaultCellStyle |
-| headingStyle | style object to the data table heading cells as described in the [xlsx-js-style](https://www.npmjs.com/package/xlsx-js-style) package | false | defaultHeadingStyle |
-| titleStyle | style object to the sheet title cells as described in the [xlsx-js-style](https://www.npmjs.com/package/xlsx-js-style) package | false | defaultTitleStyle |
+| cellStyle | CellStyle | style object to the data table cells as described in the [xlsx-js-style](https://www.npmjs.com/package/xlsx-js-style) package | false | defaultCellStyle |
+| headingStyle | CellStyle | style object to the data table heading cells as described in the [xlsx-js-style](https://www.npmjs.com/package/xlsx-js-style) package | false | defaultHeadingStyle |
+| titleStyle | CellStyle | style object to the sheet title cells as described in the [xlsx-js-style](https://www.npmjs.com/package/xlsx-js-style) package | false | defaultTitleStyle |
 
 <br>
 
